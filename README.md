@@ -12,6 +12,7 @@ AISwiftAPITools is a Swift command-line tool (`swift-api-rewriter`) that **parse
 ```bash
 git clone https://github.com/your-repo/AISwiftAPITools.git
 cd AISwiftAPITools
+```
 
 ### 2️⃣ Build the CLI
 ```bash
