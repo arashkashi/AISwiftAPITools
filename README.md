@@ -1,7 +1,3 @@
-Here’s a short README.md for your package, AISwiftAPITools, explaining how it works and how to use it.
-
-📌 README.md
-
 # AISwiftAPITools
 
 AISwiftAPITools is a Swift command-line tool (`swift-api-rewriter`) that **parses Swift source files** and **extracts public function signatures**, generating a header-like `.hswift` file for API documentation.
@@ -17,32 +13,32 @@ AISwiftAPITools is a Swift command-line tool (`swift-api-rewriter`) that **parse
 git clone https://github.com/your-repo/AISwiftAPITools.git
 cd AISwiftAPITools
 
-2️⃣ Build the CLI
-
+### 2️⃣ Build the CLI
+```bash
 swift build -c release
-
-3️⃣ Install Globally (Optional)
-
+```
+### 3️⃣ Install Globally (Optional)
+```bash
 sudo cp .build/release/swift-api-rewriter /usr/local/bin/
-
+```
 Now, you can run it from anywhere using:
-
+```bash
 swift-api-rewriter <path-to-swift-file>
-
+```
 📜 Usage
 
 Extract API from a Swift file
-
+```bash
 swift run swift-api-rewriter MyClass.swift
-
+```
 or, if installed:
-
+```bash
 swift-api-rewriter MyClass.swift
-
+```
 Example
 
 🔹 Input (MyClass.swift):
-
+```swift
 public func greet(name: String) -> String {
     return "Hello, \(name)!"
 }
@@ -52,11 +48,14 @@ private func hidden() {}
 public func add(a: Int, b: Int) -> Int {
     return a + b
 }
+```
 
 🔹 Output (MyClass.hswift):
 
+```swift
 public func greet(name: String) -> String
 public func add(a: Int, b: Int) -> Int
+```
 
 ✅ This extracts public APIs and generates an .hswift file for easy reference.
 
